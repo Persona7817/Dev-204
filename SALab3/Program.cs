@@ -17,12 +17,14 @@ namespace SALab3
 
             Student1.Read("student.txt");
             Student1.Write("Student.txt");
-            Student1.Read("Student.txt");
-            //Student1.Dispose();
+            Student2.Read("student.txt");
+            Student2.Write("Student.txt");
+            Student1.Dispose();
+            Student2.Dispose();
 
             Teacher Teacher1 = new Teacher("Adam","King");
             Course course1 = new Course("Programming with C#");
-            Course course2 = new Course("OS");
+            Course course2 = new Course("Something else");
             Teacher Teacher2 = new Teacher("Kylie","Patterson");
             course1.AddTeacher(Teacher1);
             course2.AddTeacher(Teacher2);

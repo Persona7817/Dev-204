@@ -33,7 +33,7 @@ namespace SALab3
                 using(sr)
                 {
                     string line = sr.ReadToEnd();
-                    Console.WriteLine(line);
+                    //Console.WriteLine(line);
                 }
             }
             catch(Exception e)
@@ -54,18 +54,17 @@ namespace SALab3
                 sw = new StreamWriter(filename);
                 string[] lines = { this.FirstName, this.LastName};
                 try
-
                 {
                     using (sw)
                     {
                         foreach (string line in lines)
                         {
                             sw.WriteLine(line);
+                            //Console.WriteLine(line);
                         }
 
                     }
                 }
-
                 catch (Exception)
                 {
                     Console.WriteLine("This file could not be written");
@@ -77,14 +76,11 @@ namespace SALab3
                     sw = null;
                 }
             }
-
-
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
         protected virtual void Dispose(bool disposing)
         {
             if (disposed)
@@ -103,9 +99,6 @@ namespace SALab3
             }
             disposed = true;
         }
-
-
     }
 
-    }
-
+}
