@@ -11,15 +11,8 @@ namespace SALab3
 {
     public abstract class Person : IDisposable
     {
-        private int age;
-        private string gender;
-
         public string FirstName { get; set; }
         public string LastName{ get; set;}
-        public int Age { get => age; set => age = value; }
-        public string Gender { get => gender; set => gender = value; }
-
-
         public Person(string firstname, String lastname)
         {
             this.FirstName = firstname;
@@ -34,19 +27,15 @@ namespace SALab3
         {
 
             sr = new StreamReader(filename);
-
-
             try
 
             { 
-
                 using(sr)
                 {
                     string line = sr.ReadToEnd();
                     Console.WriteLine(line);
                 }
             }
-
             catch(Exception e)
             {
                 Console.WriteLine("File Not found");
@@ -60,17 +49,13 @@ namespace SALab3
 
         }
 
-
         public void Write(string filename)
             {
-
                 sw = new StreamWriter(filename);
-                string[] lines = { this.FirstName, this.LastName, this.Gender, this.Age.ToString() };
-
+                string[] lines = { this.FirstName, this.LastName};
                 try
 
                 {
-
                     using (sw)
                     {
                         foreach (string line in lines)
@@ -88,11 +73,9 @@ namespace SALab3
                 }
                 finally
                 {
-                    sr.Close();
-                    sr = null;
+                    sw.Close();
+                    sw = null;
                 }
-
-
             }
 
 

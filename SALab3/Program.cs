@@ -14,6 +14,12 @@ namespace SALab3
             Student Student1 = new Student("John", "Doe");
             Student Student2 = new Student("Jane", "Doe");
             Student Student3 = new Student("Max","Doe");
+
+            Student1.Read("student.txt");
+            Student1.Write("Student.txt");
+            Student1.Read("Student.txt");
+            //Student1.Dispose();
+
             Teacher Teacher1 = new Teacher("Adam","King");
             Course course1 = new Course("Programming with C#");
             Course course2 = new Course("OS");
