@@ -2,9 +2,9 @@
 
 
 
-namespace Mod2_Lab1
+namespace Mod2_Lab2
 {
-    public class Employee
+    abstract class Employee
     {
         private string name;
         private double baseSalary;
@@ -45,10 +45,12 @@ namespace Mod2_Lab1
             return this.ID + " " + this.Name;
         }
 
-        public virtual String employeeStatus()
-        {
-            return toString() + " is in the company's system";
-        }
+
+        //abstract
+        public abstract String employeeStatus();
+        
+           
+        
     }
 
     
